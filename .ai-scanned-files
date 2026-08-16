@@ -1,0 +1,3 @@
++./lua/**/*.lua
+-./lua/plugins/code-ai.lua
++./*.lua

@@ -1,0 +1,41 @@
+snippet html_comment "HTML Comment"
+  <!-- ${1:comment} -->$0
+
+snippet html_tag "Generic HTML Tag"
+  <${1:div}>${2}</$1>$0
+
+snippet html_tag_class "Generic HTML Tag with Class"
+  <${1:div} class="${2:class}">${3}</$1>$0
+
+snippet html_anchor "Anchor / Link"
+  <a href="${1:#}">${2:text}</a>$0
+
+snippet html_img "Image Tag"
+  <img src="${1}" alt="${2}">$0
+
+snippet html_script "Script Tag"
+  <script src="${1}"></script>$0
+
+snippet html_link "Stylesheet Link"
+  <link rel="stylesheet" href="${1:style.css}">$0
+
+snippet html_div "Div Tag"
+  <div class="${1:class}">
+    ${2}
+  </div>$0
+
+snippet html_span "Span Tag"
+  <span>${1}</span>$0
+
+snippet html_ul "Unordered List"
+  <ul>
+    <li>${1}</li>
+  </ul>$0
+
+snippet html_ol "Ordered List"
+  <ol>
+    <li>${1}</li>
+  </ol>$0
+
+snippet html_button "Button"
+  <button type="${1:button}">${2:Click me}</button>$0
