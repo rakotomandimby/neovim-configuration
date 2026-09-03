@@ -22,7 +22,7 @@ return {
     append_embeded_system_instructions = true,
     locale                  = 'en',
     ollama_host             = 'http://192.168.122.1:11434',
-    ollama_model            = 'jaahas/qwen3.5-uncensored:4b',
+    ollama_model            = 'brnpistone/Qwen3.5-4B-AgentCoder-q6-k',
     prompts = (function()
       local function createPrompt(command, models, query_mode, append_embeded_system_instructions)
         return {
