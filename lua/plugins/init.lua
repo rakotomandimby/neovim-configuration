@@ -8,6 +8,9 @@ return {
     "nvim-tree/nvim-tree.lua",
     branch = "master",
     event = "VeryLazy",
+    config = function()
+      require("configs.nvim-tree").setup()
+    end,
   },
   {
     "neovim/nvim-lspconfig",
