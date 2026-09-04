@@ -44,7 +44,7 @@ return {
           'AICodeMicroDual',
           {
             anthropic_model='disabled',
-            googleai_model='gemini-3.7-flash-minimal',
+            googleai_model='gemini-3.8-flash-minimal',
             openai_model='gpt-5.4-nano',
           },
           'auto'
@@ -62,7 +62,7 @@ return {
           'AICodeMiniGgl',
           {
             anthropic_model='disabled',
-            googleai_model= 'gemini-3.7-flash-low',
+            googleai_model= 'gemini-3.8-flash-low',
             openai_model='disabled',
           },
           'auto'),
@@ -70,7 +70,7 @@ return {
           'AICodeMiniDual',
           {
             anthropic_model='claude-sonnet-5-low',
-            googleai_model= 'gemini-3.7-flash-low',
+            googleai_model= 'gemini-3.8-flash-low',
             openai_model='disabled',
           },
           'auto'),
@@ -88,7 +88,7 @@ return {
           'AICodeMediumGgl',
           {
             anthropic_model='disabled',
-            googleai_model='gemini-3.7-flash-medium',
+            googleai_model='gemini-3.8-flash-medium',
             openai_model='disabled',
           },
           'auto'
@@ -97,7 +97,7 @@ return {
           'AICodeMediumDual',
           {
             anthropic_model='claude-sonnet-5-medium',
-            googleai_model='gemini-3.7-flash-medium',
+            googleai_model='gemini-3.8-flash-medium',
             openai_model='disabled',
             },
           'auto'
@@ -116,7 +116,7 @@ return {
           'AICodeMaxiGgl',
           {
             anthropic_model= 'disabled',
-            googleai_model= 'gemini-3.7-flash-high',
+            googleai_model= 'gemini-3.8-flash-high',
             openai_model= 'disabled',
           },
           'auto'
@@ -125,7 +125,7 @@ return {
           'AICodeMaxiTrial',
           {
             anthropic_model= 'claude-sonnet-5-high',
-            googleai_model='gemini-3.7-flash-high',
+            googleai_model='gemini-3.8-flash-high',
             openai_model= 'gpt-5.6-terra',
           },
           'auto'
