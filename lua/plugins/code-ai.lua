@@ -39,13 +39,12 @@ return {
         }
       end
       return {
-        -- Micro is only Dual
         ai_code_micro_dual= createPrompt(
           'AICodeMicroDual',
           {
             anthropic_model='disabled',
             googleai_model='gemini-3.8-flash-minimal',
-            openai_model='gpt-5.4-nano',
+            openai_model='gpt-6-luna',
           },
           'auto'
         ),
@@ -53,7 +52,7 @@ return {
         ai_code_mini_ant = createPrompt(
           'AICodeMiniAnt',
           {
-            anthropic_model='claude-sonnet-5-low',
+            anthropic_model='claude-sonnet-5-5-low',
             googleai_model= 'disabled',
             openai_model='disabled',
           },
@@ -69,7 +68,7 @@ return {
         ai_code_mini_dual = createPrompt(
           'AICodeMiniDual',
           {
-            anthropic_model='claude-sonnet-5-low',
+            anthropic_model='claude-sonnet-5-5-low',
             googleai_model= 'gemini-3.8-flash-low',
             openai_model='disabled',
           },
@@ -78,7 +77,7 @@ return {
         ai_code_medium_ant = createPrompt(
           'AICodeMediumAnt',
           {
-            anthropic_model='claude-sonnet-5-medium',
+            anthropic_model='claude-sonnet-5-5-medium',
             googleai_model='disabled',
             openai_model='disabled',
           },
@@ -96,7 +95,7 @@ return {
         ai_code_medium_dual  = createPrompt(
           'AICodeMediumDual',
           {
-            anthropic_model='claude-sonnet-5-medium',
+            anthropic_model='claude-sonnet-5-5-medium',
             googleai_model='gemini-3.8-flash-medium',
             openai_model='disabled',
             },
@@ -106,7 +105,7 @@ return {
         ai_code_maxi_ant = createPrompt(
           'AICodeMaxiAnt',
           {
-            anthropic_model= 'claude-sonnet-5-high',
+            anthropic_model= 'claude-sonnet-5-5-high',
             googleai_model= 'disabled',
             openai_model= 'disabled',
           },
@@ -121,12 +120,21 @@ return {
           },
           'auto'
         ),
+        ai_code_maxi_dual = createPrompt(
+          'AICodeMaxiDual',
+          {
+            anthropic_model= 'claude-sonnet-5-5-high',
+            googleai_model= 'gemini-3.8-flash-high',
+            openai_model= 'disabled',
+          },
+          'auto'
+        ),
         ai_code_maxi_trial = createPrompt(
           'AICodeMaxiTrial',
           {
-            anthropic_model= 'claude-sonnet-5-high',
+            anthropic_model= 'claude-sonnet-5-5-high',
             googleai_model='gemini-3.8-flash-high',
-            openai_model= 'gpt-5.6-terra',
+            openai_model= 'gpt-6-sol',
           },
           'auto'
         ),
