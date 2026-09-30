@@ -58,6 +58,10 @@ It keeps NvChad as the base distribution and layers custom Lua modules, plugin s
   - Caches attached LSP client names
   - Normalizes Copilot naming in the statusline
 
+- `lua/configs/nvim-tree/*`
+  - Configures `nvim-tree` settings and custom decorators
+  - Implements a custom decorator to display line counts next to file names
+
 - `lua/configs/window_blink/*`
   - Implements a custom blinking border effect when entering a window
   - Uses floating windows and highlight groups to draw the effect
@@ -96,7 +100,7 @@ This configuration adds or customizes:
 - `NvChad/NvChad` as the base distribution
 - `folke/lazy.nvim` for plugin management
 - `stevearc/conform.nvim` for formatting
-- `nvim-tree/nvim-tree.lua` for file browsing
+- `nvim-tree/nvim-tree.lua` for file browsing with a custom line count decorator
 - `neovim/nvim-lspconfig` and `williamboman/mason-lspconfig.nvim` for LSP support
 - `L3MON4D3/LuaSnip` for snippets
 - `nvim-treesitter/nvim-treesitter` for syntax parsing
@@ -123,7 +127,7 @@ This setup is centered around a few clear ideas:
 - keep NvChad as the stable base instead of rebuilding everything from scratch
 - use Neovim 0.11+ native LSP configuration patterns
 - keep common actions close at hand through custom mappings
-- improve navigation and feedback with a custom statusline and window-focus blink
+- improve navigation and feedback with a custom statusline, file tree line count decorator, and window-focus blink
 - integrate AI tools directly into the editing workflow
 - keep local snippets and prompt helpers in the repository
 
@@ -153,3 +157,4 @@ This configuration is only possible because of the work of others.
 - [git-blame.nvim](https://github.com/f-person/git-blame.nvim) for inline Git context
 - [LazyVim starter](https://github.com/LazyVim/starter), which also helped inspire the broader starter experience around NvChad
 - all plugin authors, maintainers, and contributors whose work this configuration builds upon
+
