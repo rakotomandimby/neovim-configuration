@@ -39,15 +39,6 @@ return {
         }
       end
       return {
-        ai_code_micro_dual= createPrompt(
-          'AICodeMicroDual',
-          {
-            anthropic_model='disabled',
-            googleai_model='gemini-3.8-flash-minimal',
-            openai_model='gpt-6-luna-low',
-          },
-          'auto'
-        ),
         -- Mini is Ant, Ggl, Dual
         ai_code_mini_ant = createPrompt(
           'AICodeMiniAnt',
