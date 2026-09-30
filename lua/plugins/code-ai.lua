@@ -44,7 +44,7 @@ return {
           {
             anthropic_model='disabled',
             googleai_model='gemini-3.8-flash-minimal',
-            openai_model='gpt-6-luna',
+            openai_model='gpt-6-luna-low',
           },
           'auto'
         ),
