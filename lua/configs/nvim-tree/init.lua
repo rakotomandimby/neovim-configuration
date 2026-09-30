@@ -1,6 +1,6 @@
 local M = {}
 
-local LineCountDecorator = require("utils.line_count_decorator")
+local LineCountDecorator = require("configs.nvim-tree.decorators.line_count")
 
 M.opts = {
   filters = { dotfiles = false, },
