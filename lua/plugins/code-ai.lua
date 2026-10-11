@@ -5,9 +5,9 @@ return {
   keys = { },
   dependencies = 'nvim-lua/plenary.nvim',
   opts = {
-    anthropic_model         = 'claude-haiku-4-5-low',
-    googleai_model          = 'gemini-3.5-flash-lite-low',
-    openai_model            = 'gpt-6-luna-low',
+    anthropic_model         = 'claude-haiku-4-5:low',
+    googleai_model          = 'gemini-3.5-flash-lite:low',
+    openai_model            = 'gpt-6-luna:low',
     anthropic_agent_host    = 'http://192.168.122.1:6010',
     googleai_agent_host     = 'http://192.168.122.1:5010',
     openai_agent_host       = 'http://192.168.122.1:4010',
@@ -43,7 +43,7 @@ return {
         ai_code_mini_ant = createPrompt(
           'AICodeMiniAnt',
           {
-            anthropic_model='claude-sonnet-5-5-low',
+            anthropic_model='claude-sonnet-5-5:low',
             googleai_model= 'disabled',
             openai_model='disabled',
           },
@@ -52,31 +52,31 @@ return {
           'AICodeMiniGgl',
           {
             anthropic_model='disabled',
-            googleai_model= 'gemini-3.8-flash-low',
+            googleai_model= 'gemini-3.8-flash:low',
             openai_model='disabled',
           },
           'auto'),
         ai_code_mini_dual = createPrompt(
           'AICodeMiniDual',
           {
-            anthropic_model='claude-sonnet-5-5-low',
-            googleai_model= 'gemini-3.8-flash-low',
+            anthropic_model='claude-sonnet-5-5:low',
+            googleai_model= 'gemini-3.8-flash:low',
             openai_model='disabled',
           },
           'auto'),
         ai_code_mini_trial = createPrompt(
           'AICodeMiniTrial',
           {
-            anthropic_model='claude-sonnet-5-5-low',
-            googleai_model= 'gemini-3.8-flash-low',
-            openai_model='gpt-6-terra-low',
+            anthropic_model='claude-sonnet-5-5:low',
+            googleai_model= 'gemini-3.8-flash:low',
+            openai_model='gpt-6-terra:low',
           },
           'auto'),
         -- Medium is Ant, Ggl, Dual
         ai_code_medium_ant = createPrompt(
           'AICodeMediumAnt',
           {
-            anthropic_model='claude-sonnet-5-5-medium',
+            anthropic_model='claude-sonnet-5-5:medium',
             googleai_model='disabled',
             openai_model='disabled',
           },
@@ -86,7 +86,7 @@ return {
           'AICodeMediumGgl',
           {
             anthropic_model='disabled',
-            googleai_model='gemini-3.8-flash-medium',
+            googleai_model='gemini-3.8-flash:medium',
             openai_model='disabled',
           },
           'auto'
@@ -94,8 +94,8 @@ return {
         ai_code_medium_dual  = createPrompt(
           'AICodeMediumDual',
           {
-            anthropic_model='claude-sonnet-5-5-medium',
-            googleai_model='gemini-3.8-flash-medium',
+            anthropic_model='claude-sonnet-5-5:medium',
+            googleai_model='gemini-3.8-flash:medium',
             openai_model='disabled',
             },
           'auto'
@@ -104,7 +104,7 @@ return {
         ai_code_maxi_ant = createPrompt(
           'AICodeMaxiAnt',
           {
-            anthropic_model= 'claude-sonnet-5-5-high',
+            anthropic_model= 'claude-sonnet-5-5:high',
             googleai_model= 'disabled',
             openai_model= 'disabled',
           },
@@ -114,16 +114,25 @@ return {
           'AICodeMaxiGgl',
           {
             anthropic_model= 'disabled',
-            googleai_model= 'gemini-3.8-flash-high',
+            googleai_model= 'gemini-3.8-flash:high',
             openai_model= 'disabled',
+          },
+          'auto'
+        ),
+        ai_code_maxi_openai = createPrompt(
+          'AICodeMaxiOpenAI',
+          {
+            anthropic_model= 'disabled',
+            googleai_model= 'disabled',
+            openai_model= 'gpt-6.1-sol:high',
           },
           'auto'
         ),
         ai_code_maxi_dual = createPrompt(
           'AICodeMaxiDual',
           {
-            anthropic_model= 'claude-sonnet-5-5-high',
-            googleai_model= 'gemini-3.8-flash-high',
+            anthropic_model= 'claude-sonnet-5-5:high',
+            googleai_model= 'gemini-3.8-flash:high',
             openai_model= 'disabled',
           },
           'auto'
@@ -131,9 +140,9 @@ return {
         ai_code_maxi_trial = createPrompt(
           'AICodeMaxiTrial',
           {
-            anthropic_model= 'claude-sonnet-5-5-high',
-            googleai_model='gemini-3.8-flash-high',
-            openai_model= 'gpt-6.1-sol-high',
+            anthropic_model= 'claude-sonnet-5-5:high',
+            googleai_model='gemini-3.8-flash:high',
+            openai_model= 'gpt-6.1-sol:high',
           },
           'auto'
         ),
