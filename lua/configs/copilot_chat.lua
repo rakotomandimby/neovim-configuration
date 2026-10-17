@@ -62,7 +62,7 @@ local config = function()
       footer = nil, -- footer of chat window
       zindex = 1, -- determines if window is on top or below other floating windows
     },
-    model = 'gpt-5.4',
+    model = 'mai-code-1.1-flash:high',
     stop_on_function_failure = true,
     functions = vim.tbl_deep_extend('force', require("CopilotChat.config.functions"), file_glob_function),
     providers = require('CopilotChat.config.providers'),
