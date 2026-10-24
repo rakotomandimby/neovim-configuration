@@ -104,7 +104,7 @@ return {
         ai_code_maxi_ant = createPrompt(
           'AICodeMaxiAnt',
           {
-            anthropic_model= 'claude-sonnet-5-5:high',
+            anthropic_model= 'claude-opus-5-5:high',
             googleai_model= 'disabled',
             openai_model= 'disabled',
           },
@@ -114,7 +114,7 @@ return {
           'AICodeMaxiGgl',
           {
             anthropic_model= 'disabled',
-            googleai_model= 'gemini-3.8-flash:high',
+            googleai_model= 'gemini-4-argon:high',
             openai_model= 'disabled',
           },
           'auto'
@@ -131,8 +131,8 @@ return {
         ai_code_maxi_dual = createPrompt(
           'AICodeMaxiDual',
           {
-            anthropic_model= 'claude-sonnet-5-5:high',
-            googleai_model= 'gemini-3.8-flash:high',
+            anthropic_model= 'claude-opus-5-5:high',
+            googleai_model='gemini-4-argon:high',
             openai_model= 'disabled',
           },
           'auto'
@@ -140,8 +140,8 @@ return {
         ai_code_maxi_trial = createPrompt(
           'AICodeMaxiTrial',
           {
-            anthropic_model= 'claude-sonnet-5-5:high',
-            googleai_model='gemini-3.8-flash:high',
+            anthropic_model= 'claude-opus-5-5:high',
+            googleai_model='gemini-4-argon:high',
             openai_model= 'gpt-6.1-sol:high',
           },
           'auto'
