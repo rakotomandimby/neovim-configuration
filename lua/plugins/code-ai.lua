@@ -114,7 +114,7 @@ return {
           'AICodeMaxiGgl',
           {
             anthropic_model= 'disabled',
-            googleai_model= 'gemini-4-argon:high',
+            googleai_model= 'gemini-3.8-flash:high',
             openai_model= 'disabled',
           },
           'auto'
@@ -132,7 +132,7 @@ return {
           'AICodeMaxiDual',
           {
             anthropic_model= 'claude-opus-5-5:high',
-            googleai_model='gemini-4-argon:high',
+            googleai_model='gemini-3.8-flash:high',
             openai_model= 'disabled',
           },
           'auto'
@@ -141,7 +141,7 @@ return {
           'AICodeMaxiTrial',
           {
             anthropic_model= 'claude-opus-5-5:high',
-            googleai_model='gemini-4-argon:high',
+            googleai_model='gemini-3.8-flash:high',
             openai_model= 'gpt-6.1-sol:high',
           },
           'auto'
