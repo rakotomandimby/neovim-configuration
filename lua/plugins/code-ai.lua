@@ -63,5 +63,8 @@ return {
         ),
       }
     end)(),
-  }
+  },
+  config = function(_, opts)
+    require("ai").setup(opts)
+  end,
 }
