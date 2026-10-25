@@ -1,5 +1,5 @@
 return {
-  "code-ai-nvim/code-ai.nvim",
+  "code-ai-nvim/code-ai.nvim", 
   event = 'VeryLazy',
   lazy = false,
   keys = { },
@@ -26,7 +26,7 @@ return {
     ollama_host             = 'http://192.168.122.1:11434',
     ollama_model            = 'gemma3:4b',
     prompts = (function()
-      local function createPrompt(command, models, query_mode)
+      local function createPrompt(command, models)
         return {
           command       = command,
           models        = models,
@@ -34,18 +34,16 @@ return {
           loading_tpl   = '${input}',
           result_tpl    = '${output}',
           require_input = true,
-          query_mode    = query_mode or 'agent',
         }
       end
       return {
         ai_code_mini = createPrompt(
           'AICodeMini',
           {
-            { plan      = nil }, 
+            { plan      = 'disabled' },
             { implement = 'anthropic/claude-sonnet-5-5:medium' },
-            { reword    = nil}, 
-          },
-          'auto'
+            { reword    = 'disabled' },
+          }
         ),
         ai_code_medium = createPrompt(
           'AICodeMedium',
@@ -53,21 +51,17 @@ return {
             { plan      = 'anthropic/claude-opus-5-5:medium' },
             { implement = 'anthropic/claude-sonnet-5-5:medium' },
             { reword    = 'anthropic/claude-haiku-5-5:low' },
-          },
-          'auto'
+          }
         ),
-
         ai_code_maxi = createPrompt(
           'AICodeMaxi',
           {
             { plan      = 'anthropic/claude-opus-5-5:high' },
             { implement = 'googleai/gemini-3.8-flash:high' },
             { reword    = 'openai/gpt-6-luna:medium' },
-          },
-          'auto'
+          }
         ),
       }
     end)(),
   }
 }
-
