@@ -1,5 +1,5 @@
 local cc_fork="rakotomandimby/CopilotChat.nvim"
-local cc_fork_branch="feat/1584-set-reasoning-effort"
+local cc_fork_branch="feat/1588-display-ai-credits-in-model-list"
 local cc_upstream="CopilotC-Nvim/CopilotChat.nvim"
 local cc_upstream_branch="main"
 
