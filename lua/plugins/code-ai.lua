@@ -50,7 +50,7 @@ return {
           {
             { plan      = 'anthropic/claude-opus-5-5:medium' },
             { implement = 'anthropic/claude-sonnet-5-5:medium' },
-            { reword    = 'anthropic/claude-haiku-5-5:low' },
+            { reword    = 'local' },
           }
         ),
         ai_code_maxi = createPrompt(
@@ -58,7 +58,7 @@ return {
           {
             { plan      = 'anthropic/claude-opus-5-5:high' },
             { implement = 'googleai/gemini-3.8-flash:high' },
-            { reword    = 'openai/gpt-6-luna:medium' },
+            { reword    = 'local' },
           }
         ),
       }
