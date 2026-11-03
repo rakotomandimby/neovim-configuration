@@ -37,27 +37,51 @@ return {
         }
       end
       return {
-        ai_code_mini = createPrompt(
-          'AICodeMini',
+        ai_code_ant_single = createPrompt(
+          'AICodeAntSingle',
           {
             { plan      = 'disabled' },
             { implement = 'anthropic/claude-sonnet-5-5:medium' },
             { reword    = 'disabled' },
           }
         ),
-        ai_code_medium = createPrompt(
-          'AICodeMedium',
+        ai_code_ggl_single = createPrompt(
+          'AICodeGglSingle',
+          {
+            { plan      = 'disabled' },
+            { implement = 'googleai/gemini-3.8-flash:medium' },
+            { reword    = 'disabled' },
+          }
+        ),
+        ai_code_ant_medium = createPrompt(
+          'AICodeAntMedium',
           {
             { plan      = 'anthropic/claude-opus-5-5:medium' },
             { implement = 'anthropic/claude-sonnet-5-5:medium' },
             { reword    = 'local' },
           }
         ),
-        ai_code_maxi = createPrompt(
-          'AICodeMaxi',
+        ai_code_ggl_medium = createPrompt(
+          'AICodeGglMedium',
+          {
+            { plan      = 'googleai/gemini-4-argon:medium' },
+            { implement = 'googleai/gemini-3.8-flash:medium' },
+            { reword    = 'local' },
+          }
+        ),
+        ai_code_ggl_high = createPrompt(
+          'AICodeGglHigh',
+          {
+            { plan      = 'googleai/gemini-4-argon:high' },
+            { implement = 'googleai/gemini-3.8-flash:high' },
+            { reword    = 'local' },
+          }
+        ),
+        ai_code_ant_high = createPrompt(
+          'AICodeAntHigh',
           {
             { plan      = 'anthropic/claude-opus-5-5:high' },
-            { implement = 'googleai/gemini-3.8-flash:high' },
+            { implement = 'anthropic/claude-sonnet-5-5:high' },
             { reword    = 'local' },
           }
         ),
