@@ -1,11 +1,6 @@
-local cc_fork="rakotomandimby/CopilotChat.nvim"
-local cc_fork_branch="fix/ml_get-invalid-lnum"
-local cc_upstream="CopilotC-Nvim/CopilotChat.nvim"
-local cc_upstream_branch="main"
-
 return  {
-  cc_fork,
-  branch = cc_fork_branch,
+  "code-ai-nvim/copilot-chat.nvim",
+  branch = main,
   dependencies = {
     { "github/copilot.vim" },
     { "rakotomandimby/plenary.nvim", branch = "feat/full-os-getenv" },

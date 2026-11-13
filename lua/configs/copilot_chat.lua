@@ -15,13 +15,13 @@ local file_glob_function = {
       },
     },
     resolve = function(input, source)
-      local files = require('CopilotChat.utils.files').glob(source.cwd(), {
+      local files = require('copilot-chat.utils.files').glob(source.cwd(), {
         pattern = input.pattern,
       })
 
       local resources = {}
       for _, file_path in ipairs(files) do
-        local data, mimetype = require('CopilotChat.resources').get_file(file_path)
+        local data, mimetype = require('copilot-chat.resources').get_file(file_path)
         if data then
           table.insert(resources, {
             uri = 'file://' .. file_path,
@@ -47,9 +47,9 @@ local get_system_prompt = function()
 end
 
 local config = function()
-  require("CopilotChat").setup {
+  require("copilot-chat").setup {
     system_prompt = get_system_prompt(),
-    selection = require('CopilotChat.select').visual,
+    selection = require('copilot-chat.select').visual,
     window = {
       layout = 'vertical', -- 'vertical', 'horizontal', 'float', 'replace', or a function that returns the layout
       width = 0.4, -- fractional width of parent, or absolute width in columns when > 1
@@ -64,10 +64,10 @@ local config = function()
     },
     model = 'mai-code-1.1-flash:high',
     stop_on_function_failure = true,
-    functions = vim.tbl_deep_extend('force', require("CopilotChat.config.functions"), file_glob_function),
-    providers = require('CopilotChat.config.providers'),
-    prompts = require('CopilotChat.config.prompts'),
-    mappings = require('CopilotChat.config.mappings'),
+    functions = vim.tbl_deep_extend('force', require("copilot-chat.config.functions"), file_glob_function),
+    providers = require('copilot-chat.config.providers'),
+    prompts = require('copilot-chat.config.prompts'),
+    mappings = require('copilot-chat.config.mappings'),
     log_level = 'debug'
   }
 end

@@ -72,8 +72,8 @@ return {
         ai_code_ggl_high = createPrompt(
           'AICodeGglHigh',
           {
-            { plan      = 'googleai/gemini-4-carbon:medium' },
-            { implement = 'googleai/gemini-4-argon:medium' },
+            { plan      = 'googleai/gemini-4-argon:medium' },
+            { implement = 'googleai/gemini-4-hydrogen:medium' },
             { reword    = 'local' },
           }
         ),
