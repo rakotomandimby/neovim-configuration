@@ -62,13 +62,13 @@ local config = function()
       footer = nil, -- footer of chat window
       zindex = 1, -- determines if window is on top or below other floating windows
     },
-    model = 'mai-code-1.1-flash:high',
+    model = 'mai-code-2-flash:high',
     stop_on_function_failure = true,
     functions = vim.tbl_deep_extend('force', require("copilot-chat.config.functions"), file_glob_function),
     providers = require('copilot-chat.config.providers'),
     prompts = require('copilot-chat.config.prompts'),
     mappings = require('copilot-chat.config.mappings'),
-    log_level = 'debug'
+    log_level = 'error'
   }
 end
 

@@ -18,6 +18,7 @@ return {
     anthropic_api_key       = os.getenv('ANTHROPIC_API_KEY'),
     openai_api_key          = os.getenv('OPENAI_API_KEY'),
     googleai_api_key        = os.getenv('GOOGLEAI_API_KEY'),
+    googleai_project_id     = os.getenv('GOOGLEAI_PROJECT_ID'),
     upload_url              = os.getenv('CODE_AI_UPLOAD_URL'),
     upload_token            = os.getenv('CODE_AI_UPLOAD_TOKEN'),
     stats_ingestion_token   = os.getenv('CODE_AI_INGESTION_TOKEN'),
