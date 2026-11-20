@@ -1,8 +1,8 @@
-require "nvchad.mappings"
+require("nvchad.mappings")
 pcall(vim.keymap.del, "n", "<TAB>")
 pcall(vim.keymap.del, "n", "<leader>x")
 
-local actions = require "utils.actions"
+local actions = require("utils.actions")
 local map = vim.keymap.set
 
 map("n", "<C-Right>", "<C-w>10>", { desc = "Increase window size by 10" })
@@ -29,7 +29,7 @@ wk.add({
   { "<leader>yb", function() actions.yank_file_info("%:t:r", "basename", "basename", "File Basename") end, desc = "Yank basename" },
 
   { "<leader>c", group = "Copilot" },
-  { "<leader>cc", group = "CopilotChat" },
+  { "<leader>cc", group = "Copilot Chat" },
   { "<leader>cco", "<cmd>CopilotChatOpen<CR>", desc = "Open Copilot Chat" },
   { "<leader>ccc", "<cmd>CopilotChatClose<CR>", desc = "Close Copilot Chat" },
   { "<leader>cct", "<cmd>CopilotChatToggle<CR>", desc = "Toggle Copilot Chat" },

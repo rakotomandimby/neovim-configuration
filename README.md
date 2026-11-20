@@ -45,6 +45,17 @@ It keeps NvChad as the base distribution and layers custom Lua modules, plugin s
   - Supports copying absolute paths, relative paths, filenames, and basenames
   - Supports deleting the current file from inside Neovim
 
+### AI and Copilot configuration
+
+- `lua/configs/copilot.lua`
+  - Configures inline completion keymaps for `github/copilot.vim`
+  - Disables default `<Tab>` mapping in favor of Alt-based accept/navigation bindings
+
+- `lua/configs/copilot_chat.lua`
+  - Configures `code-ai-nvim/copilot-chat.nvim` with the `mai-code-2-flash:high` default model
+  - Adds a custom `file_glob` resource function (`files://glob_contents/{pattern}`)
+  - Loads project-local system instructions from `.ai-system-instructions.md` when present
+
 ### UI customization
 
 - `lua/chadrc.lua`
@@ -105,9 +116,8 @@ This configuration adds or customizes:
 - `L3MON4D3/LuaSnip` for snippets
 - `nvim-treesitter/nvim-treesitter` for syntax parsing
 - `github/copilot.vim` for inline AI completion
-- `CopilotC-Nvim/CopilotChat.nvim` for chat-based AI workflows
+- `code-ai-nvim/copilot-chat.nvim` (with `rakotomandimby/plenary.nvim` on the `feat/full-os-getenv` branch for environment variable support) for chat-based AI workflows
 - `f-person/git-blame.nvim` for inline Git blame information
-- `code-ai-nvim/code-ai.nvim` for additional AI prompt workflows
 
 ### Snippets and AI prompt helpers
 
@@ -153,7 +163,7 @@ This configuration is only possible because of the work of others.
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip) for snippet support
 - [conform.nvim](https://github.com/stevearc/conform.nvim) for formatting
 - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) for file-tree navigation
-- [copilot.vim](https://github.com/github/copilot.vim) and [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) for AI assistance
+- [copilot.vim](https://github.com/github/copilot.vim), [code-ai-nvim/copilot-chat.nvim](https://github.com/code-ai-nvim/copilot-chat.nvim), and [rakotomandimby/plenary.nvim](https://github.com/rakotomandimby/plenary.nvim) for AI assistance
 - [git-blame.nvim](https://github.com/f-person/git-blame.nvim) for inline Git context
 - [LazyVim starter](https://github.com/LazyVim/starter), which also helped inspire the broader starter experience around NvChad
 - all plugin authors, maintainers, and contributors whose work this configuration builds upon

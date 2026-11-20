@@ -1,30 +1,32 @@
 local file_glob_function = {
   file_glob = {
-    group = 'copilot',
-    uri = 'files://glob_contents/{pattern}',
-    description = 'Includes the full contents of every file matching a specified glob pattern.',
+    group = "copilot",
+    uri = "files://glob_contents/{pattern}",
+    description = "Includes the full contents of every file matching a specified glob pattern.",
     schema = {
-      type = 'object',
-      required = { 'pattern' },
+      type = "object",
+      required = { "pattern" },
       properties = {
         pattern = {
-          type = 'string',
-          description = 'Glob pattern to match files.',
-          default = '**/*',
+          type = "string",
+          description = "Glob pattern to match files.",
+          default = "**/*",
         },
       },
     },
     resolve = function(input, source)
-      local files = require('copilot-chat.utils.files').glob(source.cwd(), {
+      local files_mod = require("copilot-chat.utils.files")
+      local resources_mod = require("copilot-chat.resources")
+      local files = files_mod.glob(source.cwd(), {
         pattern = input.pattern,
       })
 
       local resources = {}
       for _, file_path in ipairs(files) do
-        local data, mimetype = require('copilot-chat.resources').get_file(file_path)
+        local data, mimetype = resources_mod.get_file(file_path)
         if data then
           table.insert(resources, {
-            uri = 'file://' .. file_path,
+            uri = "file://" .. file_path,
             name = file_path,
             mimetype = mimetype,
             data = data,
@@ -37,39 +39,40 @@ local file_glob_function = {
   },
 }
 
-local get_system_prompt = function()
-  local file_path = vim.fn.getcwd() .. '/.ai-system-instructions.md'
+local function get_system_prompt()
+  local file_path = vim.fs.joinpath(vim.fn.getcwd(), ".ai-system-instructions.md")
   if vim.fn.filereadable(file_path) == 0 then
     return "You are an AI programming assistant."
   end
   local file_content = vim.fn.readfile(file_path)
-  return table.concat(file_content, '\n')
+  return table.concat(file_content, "\n")
 end
 
-local config = function()
-  require("copilot-chat").setup {
+local function config()
+  require("copilot-chat").setup({
     system_prompt = get_system_prompt(),
-    selection = require('copilot-chat.select').visual,
+    selection = require("copilot-chat.select").visual,
     window = {
-      layout = 'vertical', -- 'vertical', 'horizontal', 'float', 'replace', or a function that returns the layout
-      width = 0.4, -- fractional width of parent, or absolute width in columns when > 1
-      -- Options below only apply to floating windows
-      relative = 'win', -- 'editor', 'win', 'cursor', 'mouse'
-      border = 'solid', -- 'none', single', 'double', 'rounded', 'solid', 'shadow'
-      row = nil, -- row position of the window, default is centered
-      col = nil, -- column position of the window, default is centered
-      title = 'Copilot Chat', -- title of chat window
-      footer = nil, -- footer of chat window
-      zindex = 1, -- determines if window is on top or below other floating windows
+      layout = "vertical", -- "vertical", "horizontal", "float", "replace", or function
+      width = 0.4, -- fractional width of parent, or columns when > 1
+      -- Floating window options
+      relative = "win", -- "editor", "win", "cursor", "mouse"
+      border = "solid", -- "none", "single", "double", "rounded", "solid", "shadow"
+      row = nil, -- centered by default
+      col = nil, -- centered by default
+      title = "Copilot Chat",
+      footer = nil,
+      zindex = 1,
     },
-    model = 'mai-code-2-flash:high',
+    model = "mai-code-2-flash:high",
     stop_on_function_failure = true,
-    functions = vim.tbl_deep_extend('force', require("copilot-chat.config.functions"), file_glob_function),
-    providers = require('copilot-chat.config.providers'),
-    prompts = require('copilot-chat.config.prompts'),
-    mappings = require('copilot-chat.config.mappings'),
-    log_level = 'error'
-  }
+    functions = vim.tbl_deep_extend("force", require("copilot-chat.config.functions"), file_glob_function),
+    providers = require("copilot-chat.config.providers"),
+    prompts = require("copilot-chat.config.prompts"),
+    mappings = require("copilot-chat.config.mappings"),
+    log_level = "error",
+  })
 end
 
 return config
+

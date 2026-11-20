@@ -1,6 +1,6 @@
 return  {
   "code-ai-nvim/copilot-chat.nvim",
-  branch = main,
+  branch = "main",
   dependencies = {
     { "github/copilot.vim" },
     { "rakotomandimby/plenary.nvim", branch = "feat/full-os-getenv" },
