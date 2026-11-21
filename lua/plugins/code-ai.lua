@@ -65,17 +65,17 @@ return {
         ai_code_ggl_medium = createPrompt(
           'AICodeGglMedium',
           {
-            { plan      = 'googleai/gemini-3.8-flash:high' },
+            { plan      = 'googleai/gemini-4-argon:medium' },
             { reword    = 'local' },
-            { implement = 'googleai/gemini-3.8-flash:medium' },
+            { implement = 'googleai/gemini-4-hydrogen:medium' },
           }
         ),
         ai_code_ggl_high = createPrompt(
           'AICodeGglHigh',
           {
-            { plan      = 'googleai/gemini-4-argon:medium' },
+            { plan      = 'googleai/gemini-4-carbon:medium' },
             { reword    = 'local' },
-            { implement = 'googleai/gemini-4-hydrogen:medium' },
+            { implement = 'googleai/gemini-4-neon:medium' },
           }
         ),
         ai_code_ant_high = createPrompt(
